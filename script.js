@@ -3,6 +3,7 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const repeatPassword = document.getElementById('repeat-password');
+const validation = document.getElementById('validation');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -43,13 +44,21 @@ function checkInputs() {
     setSuccessFor(repeatPassword);
   }
 
-  // A function to show a succes message (check if the form control contains the classes)
+  if (
+    username.parentElement.classList.contains('success') &&
+    email.parentElement.classList.contains('success') &&
+    password.parentElement.classList.contains('success') &&
+    repeatPassword.parentElement.classList.contains('success')
+  ) {
+    validation.style.display = 'inline-block';
+  } else {
+    validation.style.display = 'none';
+  }
 
   function setErrorFor(input, message) {
     const formControl = input.parentElement; // .form-control
     const small = formControl.querySelector('small');
     small.innerText = message;
-
     formControl.className = 'form-control error';
   }
 

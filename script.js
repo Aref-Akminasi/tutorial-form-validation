@@ -11,6 +11,7 @@ form.addEventListener('submit', (e) => {
 });
 
 function checkInputs() {
+  /* Getting the values of all inputs */
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
@@ -55,6 +56,7 @@ function checkInputs() {
     validation.style.display = 'none';
   }
 
+  /* Set error and set succes will target the parent element of the input which has the form control */
   function setErrorFor(input, message) {
     const formControl = input.parentElement; // .form-control
     const small = formControl.querySelector('small');

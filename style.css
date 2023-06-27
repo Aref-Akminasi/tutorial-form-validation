@@ -57,6 +57,14 @@ body {
   padding: 10px;
 }
 
+/* The icons for the form fields will be hidden until the parent element gets the class 'success' or 'error'. Based on that the approprite icon will be displayed */
+.form-control i {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  visibility: hidden;
+}
+
 .form-control.success input {
   border-color: #2ecc71;
 }
@@ -73,13 +81,6 @@ body {
 .form-control.error i.fa-exclamation-circle {
   visibility: visible;
   color: #e74c3c;
-}
-
-.form-control i {
-  position: absolute;
-  top: 35px;
-  right: 10px;
-  visibility: hidden;
 }
 
 .form-control small {

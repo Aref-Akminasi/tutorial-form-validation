@@ -1,4 +1,4 @@
-# tutorial-form-validation
+# Tutorial Form Validation
 
 This is a tutorial project of a form validation with regular expressions.
 

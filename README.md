@@ -1,6 +1,6 @@
-# Frontendmentor Results Summary Component
+# Tutorial Form Validation
 
-This is the frontend mentor design challenge of a summary component.
+This is a tutorial project of a form validation with regular expressions.
 
 ## Overview
 
@@ -8,7 +8,9 @@ This is the frontend mentor design challenge of a summary component.
 
 Users should be able to:
 
-- View the content.
+- Write inputs in the input fields.
+- View error messages.
+- View inputs criterias.
 
 ### Screenshots
 
@@ -16,9 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [GitHub Pages](https://aref-akminasi.github.io/frontendmentor-results-summary-component/)
-- Tutorial: [YouTube](https://www.youtube.com/watch?v=KqFAs5d3Yl8&ab_channel=KevinPowell)
-- Challenge: [Frontendmentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV)
+- Live Site URL: [GitHub Pages](https://aref-akminasi.github.io/tutorial-form-validation/)
+- Tutorial: [YouTube](https://www.youtube.com/watch?v=rsd4FNGTRBw&list=WL&index=4&ab_channel=FlorinPop)
 
 ## My process
 
@@ -26,6 +27,20 @@ Users should be able to:
 
 - HTML5
 - CSS3
-- CSS grid
-- CSS flexbox
 - JavaScript
+
+### What I learned
+
+I learned how to write regular expressions for input validation
+
+```js
+function isPassword(password) {
+  return (
+    /[A-Z]/.test(password) &&
+    /[a-z]/.test(password) &&
+    /[0-9]/.test(password) &&
+    /[!@#$%^&*]/.test(password) &&
+    password.length >= 8
+  );
+}
+```
